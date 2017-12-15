@@ -1,0 +1,49 @@
+h1, h2 {
+  font-family: sans-serif;
+}
+
+body {
+  background-color: aliceblue;
+  font-family: serif;
+  padding: 10px;
+}
+
+.selfie {
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  padding: 3px;
+  max-width: 100%;
+}
+
+.likes {
+  background-color: blue;
+  color: white;
+  margin: 10px 0;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.places {
+  background-color: green;
+  color: white;
+  margin: 10px 0;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.links {
+  background-color: #ff00a7;
+  color: white;
+  margin: 10px 0;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.links a {
+  color: white;
+}
+
+.project {
+  text-align: justify;
+}
