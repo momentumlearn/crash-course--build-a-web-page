@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>slides</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="reveal.js/css/theme/momentum.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section class="slide level2">
+
+<div class="slide">
+<p><img data-src="img/logo-main.png" /></p>
+<h2 id="crash-course-build-a-web-page">Crash Course: Build a Web Page</h2>
+<p>Wifi: TIY-Turing</p>
+<p>Password: TIYturing16</p>
+</div>
+</section>
+<section id="what-makes-a-web-page" class="slide level2">
+<h2>What Makes a Web Page?</h2>
+<ul>
+<li>HTML: the content of the page</li>
+<li>CSS: directions on how to style the page</li>
+<li>JS: code to make the page interactive</li>
+</ul>
+</section>
+<section id="view-source" class="slide level2">
+<h2>View Source</h2>
+<p>In Chrome: View &gt; Developer &gt; View Source</p>
+<p>See the HTML that makes up any page.</p>
+</section>
+<section class="slide level2">
+
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">&lt;html&gt;</span></a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">&lt;head&gt;</span></a>
+<a class="sourceLine" id="cb1-3" data-line-number="3">  <span class="kw">&lt;title&gt;</span>Momentum Learning<span class="kw">&lt;/title&gt;</span></a>
+<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="kw">&lt;/head&gt;</span></a>
+<a class="sourceLine" id="cb1-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb1-6" data-line-number="6"><span class="kw">&lt;body&gt;</span></a>
+<a class="sourceLine" id="cb1-7" data-line-number="7">    <span class="kw">&lt;h1&gt;</span>Momentum Learning<span class="kw">&lt;/h1&gt;</span></a>
+<a class="sourceLine" id="cb1-8" data-line-number="8">    <span class="kw">&lt;h2&gt;</span>Knowledge doesn&#39;t have a finish line<span class="kw">&lt;/h2&gt;</span></a>
+<a class="sourceLine" id="cb1-9" data-line-number="9">    <span class="kw">&lt;p&gt;</span></a>
+<a class="sourceLine" id="cb1-10" data-line-number="10">        We provide personalized training for companies as well as</a>
+<a class="sourceLine" id="cb1-11" data-line-number="11">        immersive courses for individuals in software development.</a>
+<a class="sourceLine" id="cb1-12" data-line-number="12">        We are a lifelong learning community that supports our alumni</a>
+<a class="sourceLine" id="cb1-13" data-line-number="13">        throughout their career journeys. We welcome students from</a>
+<a class="sourceLine" id="cb1-14" data-line-number="14">        all walks of life and value the power of a multi-generational,</a>
+<a class="sourceLine" id="cb1-15" data-line-number="15">        diverse, inclusive classroom.</a>
+<a class="sourceLine" id="cb1-16" data-line-number="16">    <span class="kw">&lt;/p&gt;</span></a>
+<a class="sourceLine" id="cb1-17" data-line-number="17"><span class="kw">&lt;/body&gt;</span></a>
+<a class="sourceLine" id="cb1-18" data-line-number="18"><span class="kw">&lt;/html&gt;</span></a></code></pre></div>
+</section>
+<section id="before-we-start" class="slide level2">
+<h2>Before we start</h2>
+<p>Go to https://thimble.mozilla.org/. Sign up. We’ll use this to demonstrate.</p>
+</section>
+<section id="html-tags" class="slide level2">
+<h2>HTML Tags</h2>
+<ul>
+<li>Always in angle brackets</li>
+<li><em>Usually</em> have an opening and closing bracket, like <code>&lt;h1&gt;Title&lt;/h1&gt;</code></li>
+<li>Nested inside each other, making a tree of <em>nodes</em> or <em>elements</em></li>
+</ul>
+</section>
+<section id="structural-tags" class="slide level2">
+<h2>Structural tags</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode html"><code class="sourceCode html"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co">&lt;!-- Required to let the browser know the version of HTML --&gt;</span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span>  </a>
+<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="co">&lt;!-- Starts the document, always the first tag --&gt;</span></a>
+<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="kw">&lt;html&gt;</span>           </a>
+<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">&lt;!-- Contains info like the title, language, and styles --&gt;</span></a>
+<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="kw">&lt;head&gt;</span></a>
+<a class="sourceLine" id="cb2-7" data-line-number="7">    <span class="kw">&lt;title&gt;</span>My HTML page<span class="kw">&lt;/title&gt;</span></a>
+<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="kw">&lt;/head&gt;</span>    </a>
+<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">&lt;!-- Contains the main content --&gt;</span></a>
+<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="kw">&lt;body&gt;&lt;/body&gt;</span>    </a>
+<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="co">&lt;!-- Closes the document --&gt;</span></a>
+<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="kw">&lt;/html&gt;</span>          </a></code></pre></div>
+</section>
+<section id="block-tags" class="slide level2">
+<h2>Block tags</h2>
+<ul>
+<li>h1, h2, h3, h4, h5, h6</li>
+<li>ul, ol, li</li>
+<li>p</li>
+<li>section</li>
+<li>article</li>
+<li>div</li>
+</ul>
+</section>
+<section id="headers" class="slide level2">
+<h2>Headers</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode html"><code class="sourceCode html"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">&lt;h1&gt;</span>The biggest header<span class="kw">&lt;/h1&gt;</span></a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="kw">&lt;h2&gt;</span>Great for section headings<span class="kw">&lt;/h2&gt;</span></a>
+<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="kw">&lt;h3&gt;</span>Good for subsection headings<span class="kw">&lt;/h3&gt;</span></a>
+<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="kw">&lt;h4&gt;</span>Wow, this must be a very nested document<span class="kw">&lt;/h4&gt;</span></a>
+<a class="sourceLine" id="cb3-5" data-line-number="5"><span class="kw">&lt;h5&gt;</span>Why you would have this many headings?<span class="kw">&lt;/h5&gt;</span></a>
+<a class="sourceLine" id="cb3-6" data-line-number="6"><span class="kw">&lt;h6&gt;</span>The smallest header<span class="kw">&lt;/h6&gt;</span></a></code></pre></div>
+</section>
+<section id="lists" class="slide level2">
+<h2>Lists</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode html"><code class="sourceCode html"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">&lt;ul&gt;</span> <span class="co">&lt;!-- unordered list --&gt;</span></a>
+<a class="sourceLine" id="cb4-2" data-line-number="2">    <span class="kw">&lt;li&gt;</span>2 cups oatmeal<span class="kw">&lt;/li&gt;</span></a>
+<a class="sourceLine" id="cb4-3" data-line-number="3">    <span class="kw">&lt;li&gt;</span>2 cups milk<span class="kw">&lt;/li&gt;</span></a>
+<a class="sourceLine" id="cb4-4" data-line-number="4">    <span class="kw">&lt;li&gt;</span>2 eggs<span class="kw">&lt;/li&gt;</span></a>
+<a class="sourceLine" id="cb4-5" data-line-number="5"><span class="kw">&lt;/ul&gt;</span></a>
+<a class="sourceLine" id="cb4-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb4-7" data-line-number="7"><span class="kw">&lt;ol&gt;</span> <span class="co">&lt;!-- ordered list --&gt;</span></a>
+<a class="sourceLine" id="cb4-8" data-line-number="8">    <span class="kw">&lt;li&gt;</span>Pour the oatmeal into a bowl<span class="kw">&lt;/li&gt;</span></a>
+<a class="sourceLine" id="cb4-9" data-line-number="9">    <span class="kw">&lt;li&gt;</span>Add the milk<span class="kw">&lt;/li&gt;</span></a>
+<a class="sourceLine" id="cb4-10" data-line-number="10">    <span class="kw">&lt;li&gt;</span>Add two eggs and mix well<span class="kw">&lt;/li&gt;</span></a>
+<a class="sourceLine" id="cb4-11" data-line-number="11"><span class="kw">&lt;/ol&gt;</span></a></code></pre></div>
+</section>
+<section id="paragraphs" class="slide level2">
+<h2>Paragraphs</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode html"><code class="sourceCode html"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">&lt;p&gt;</span></a>
+<a class="sourceLine" id="cb5-2" data-line-number="2">    Each paragraph goes inside a paragraph tag.</a>
+<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="kw">&lt;/p&gt;</span></a>
+<a class="sourceLine" id="cb5-4" data-line-number="4"><span class="kw">&lt;p&gt;</span></a>
+<a class="sourceLine" id="cb5-5" data-line-number="5">    Paragraph tags normally show up next to each other.</a>
+<a class="sourceLine" id="cb5-6" data-line-number="6"><span class="kw">&lt;/p&gt;</span></a></code></pre></div>
+</section>
+<section id="content-grouping-tags" class="slide level2">
+<h2>Content grouping tags</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode html"><code class="sourceCode html"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">&lt;section&gt;</span></a>
+<a class="sourceLine" id="cb6-2" data-line-number="2">    Useful for different sections of your document, like</a>
+<a class="sourceLine" id="cb6-3" data-line-number="3">    an introduction or the main content. Usually has a heading.</a>
+<a class="sourceLine" id="cb6-4" data-line-number="4"><span class="kw">&lt;/section&gt;</span></a>
+<a class="sourceLine" id="cb6-5" data-line-number="5"><span class="kw">&lt;article&gt;</span></a>
+<a class="sourceLine" id="cb6-6" data-line-number="6">    There are some more specific tags. Besides article, there is</a>
+<a class="sourceLine" id="cb6-7" data-line-number="7">    also header, footer, aside, and nav.</a>
+<a class="sourceLine" id="cb6-8" data-line-number="8"><span class="kw">&lt;/article&gt;</span></a>
+<a class="sourceLine" id="cb6-9" data-line-number="9"><span class="kw">&lt;div&gt;</span></a>
+<a class="sourceLine" id="cb6-10" data-line-number="10">    A generic grouping tag. Used often to style content.</a>
+<a class="sourceLine" id="cb6-11" data-line-number="11"><span class="kw">&lt;/div&gt;</span></a></code></pre></div>
+</section>
+<section id="text-tags" class="slide level2">
+<h2>Text tags</h2>
+<ul>
+<li>strong</li>
+<li>em</li>
+<li>a</li>
+<li>span</li>
+</ul>
+</section>
+<section id="strong-and-em" class="slide level2">
+<h2>strong and em</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode html"><code class="sourceCode html"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw">&lt;p&gt;</span></a>
+<a class="sourceLine" id="cb7-2" data-line-number="2">    You might use strong when you <span class="kw">&lt;strong&gt;</span>really<span class="kw">&lt;/strong&gt;</span></a>
+<a class="sourceLine" id="cb7-3" data-line-number="3">    mean it, and you might use em for <span class="kw">&lt;em&gt;</span>emphasis<span class="kw">&lt;/em&gt;</span>,</a>
+<a class="sourceLine" id="cb7-4" data-line-number="4">    or for foreign words or book titles.</a>
+<a class="sourceLine" id="cb7-5" data-line-number="5"><span class="kw">&lt;/p&gt;</span></a></code></pre></div>
+</section>
+<section id="links" class="slide level2">
+<h2>Links</h2>
+<p>The <code>&lt;a&gt;</code> tag is used for links. It has a <em>tag attribute</em> to specify where the link goes to.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode html"><code class="sourceCode html"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;https://twitter.com/momentumrdu&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb8-2" data-line-number="2">    Momentum Learning</a>
+<a class="sourceLine" id="cb8-3" data-line-number="3"><span class="kw">&lt;/a&gt;</span></a></code></pre></div>
+</section>
+<section id="tag-attributes" class="slide level2">
+<h2>Tag attributes</h2>
+<p>All tags can have tag attributes. A tag attribute has the attribute name on the left side, an equals sign, and a value in quotation marks on the right.</p>
+<ul>
+<li><code>href</code> is used in links. It stands for “hypertext reference.”</li>
+<li><code>class</code> can be used on all tags and helps with styling.</li>
+<li><code>id</code> can be used on all tags and should be unique within the document.</li>
+</ul>
+</section>
+<section id="the-image-tag" class="slide level2">
+<h2>The image tag</h2>
+<p>The image tag allows us to insert an image into a document. The <code>src</code> attribute points to the source of the image and the <code>alt</code> attribute provides a text description of the image for the visually impaired.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode html"><code class="sourceCode html"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="kw">&lt;img</span><span class="ot"> src=</span><span class="st">&quot;selfie1.png&quot;</span><span class="ot"> alt=</span><span class="st">&quot;A picture of me&quot;</span> <span class="kw">/&gt;</span></a></code></pre></div>
+</section>
+<section id="adding-css" class="slide level2">
+<h2>Adding CSS</h2>
+<p>Use a <code>link</code> tag in the <code>head</code> of your document to add a stylesheet.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode html"><code class="sourceCode html"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw">&lt;head&gt;</span></a>
+<a class="sourceLine" id="cb10-2" data-line-number="2">    <span class="kw">&lt;link</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> href=</span><span class="st">&quot;style.css&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb10-3" data-line-number="3"><span class="kw">&lt;/head&gt;</span></a></code></pre></div>
+</section>
+<section id="css" class="slide level2">
+<h2>CSS</h2>
+</section>
+<section id="css-selectors" class="slide level2">
+<h2>CSS selectors</h2>
+<p>We can apply styles to a particular part of our HTML document using <em>selectors</em>.</p>
+<ul>
+<li><code>h1</code> - selects all <code>h1</code> elements</li>
+<li><code>h1, h2</code> - selects all <code>h1</code> and <code>h2</code> elements</li>
+<li><code>.selfie</code> - selects all elements with the class “selfie”</li>
+<li><code>.sidebar a</code> - selects all <code>a</code> elements nested inside elements with the class “sidebar”</li>
+</ul>
+</section>
+<section id="css-properties" class="slide level2">
+<h2>CSS properties</h2>
+<p>We use <em>properties</em> to set the style of selected elements.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode css"><code class="sourceCode css"><a class="sourceLine" id="cb11-1" data-line-number="1"><span class="fu">.selfie</span> {</a>
+<a class="sourceLine" id="cb11-2" data-line-number="2">  <span class="kw">border-color</span>: <span class="dv">black</span>;</a>
+<a class="sourceLine" id="cb11-3" data-line-number="3">  <span class="kw">border-width</span>: <span class="dv">1px</span>;</a>
+<a class="sourceLine" id="cb11-4" data-line-number="4">  <span class="kw">border-style</span>: <span class="dv">solid</span>;</a>
+<a class="sourceLine" id="cb11-5" data-line-number="5">  <span class="kw">padding</span>: <span class="dv">3px</span>;</a>
+<a class="sourceLine" id="cb11-6" data-line-number="6">}</a></code></pre></div>
+<p>Notice the semicolons at the end of each line.</p>
+</section>
+<section id="css-syntax" class="slide level2">
+<h2>CSS syntax</h2>
+<div class="sourceCode" id="cb12"><pre class="sourceCode css"><code class="sourceCode css"><a class="sourceLine" id="cb12-1" data-line-number="1">selector {</a>
+<a class="sourceLine" id="cb12-2" data-line-number="2">    property: value;</a>
+<a class="sourceLine" id="cb12-3" data-line-number="3">}</a></code></pre></div>
+<p>Always start with a selector, then curly braces. You can have multiple property-value pairs inside the braces. You cannot nest braces.</p>
+</section>
+<section id="text-and-font-properties" class="slide level2">
+<h2>Text and font properties</h2>
+<ul>
+<li>color: the color of the text, by name or hex code</li>
+<li>font-size: the size of the text, in pixels (px) or em-units</li>
+<li>font-family: the font used, multiples can be listed</li>
+<li>font-weight: normal, bold</li>
+<li>text-decoration: none, underline, overline, line-through, blink</li>
+<li>text-align: left, right, center, justify</li>
+</ul>
+</section>
+<section id="colors" class="slide level2">
+<h2>Colors</h2>
+<p>There is a giant list of color names you can use, but people generally use a <em>hex code</em>. A hex code is a set of three numbers between 0 and 255 in hexadecimal (base-16) format, beginning with a pound sign, like: <code>#FF00A7</code>.</p>
+<p>The first number is the amount of red, the second the amount of green, and the third the amount of blue. <code>#000000</code> is black and <code>#FFFFFF</code> is white.</p>
+<p>See <a href="http://htmlcolorcodes.com/">HTML Color Codes</a>.</p>
+</section>
+<section id="block-properties" class="slide level2">
+<h2>Block properties</h2>
+<ul>
+<li>background-color</li>
+<li>padding: space inside the box</li>
+<li>margin: space outside the box</li>
+<li>border-width: size of the border</li>
+<li>border-color: color of the border</li>
+<li>border-style: none, dotted, dashed, solid, double</li>
+<li>border-radius: round corners</li>
+<li>width: total width of box, in px, em, or percentage</li>
+</ul>
+</section>
+<section id="box-model" class="slide level2">
+<h2>Box model</h2>
+<figure>
+<img data-src="box_model.png" alt="inline" /><figcaption>inline</figcaption>
+</figure>
+</section>
+<section id="margin-and-padding" class="slide level2">
+<h2>margin and padding</h2>
+<p>You can specify the margin and padding in three ways:</p>
+<ul>
+<li>one margin for all sides</li>
+<li>one margin for the top and bottom and another for the sides</li>
+<li>one margin for each side in this order: top, right, bottom, left (clockwise)</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<div class="sourceCode" id="cb13"><pre class="sourceCode css"><code class="sourceCode css"><a class="sourceLine" id="cb13-1" data-line-number="1">margin<span class="in">:</span> 5px;                <span class="co">/* all */</span></a>
+<a class="sourceLine" id="cb13-2" data-line-number="2">margin<span class="in">:</span> 5px 10px<span class="in">:</span>           <span class="co">/* vertical, horizontal */</span></a>
+<a class="sourceLine" id="cb13-3" data-line-number="3">margin<span class="in">:</span> 5px 10px 10px 20px; <span class="co">/* top, right, bottom, left */</span></a></code></pre></div>
+</section>
+<section id="units-of-measure" class="slide level2">
+<h2>Units of measure</h2>
+<ul>
+<li>px - pixels, not an absolute measure, dependent on device</li>
+<li>em - relative to the font-size, 1em = 1 x font-size, additive</li>
+<li>rem - relative to the base font-size, not additive</li>
+<li>% - percentage, relative to enclosing element</li>
+</ul>
+</section>
+<section id="a-box-with-rounded-corners-and-a-border" class="slide level2">
+<h2>A box with rounded corners and a border</h2>
+<div class="sourceCode" id="cb14"><pre class="sourceCode css"><code class="sourceCode css"><a class="sourceLine" id="cb14-1" data-line-number="1"><span class="fu">.likes</span> {</a>
+<a class="sourceLine" id="cb14-2" data-line-number="2">  <span class="kw">background-color</span>: <span class="dv">blue</span>;</a>
+<a class="sourceLine" id="cb14-3" data-line-number="3">  <span class="kw">border-color</span>: <span class="dv">black</span>;</a>
+<a class="sourceLine" id="cb14-4" data-line-number="4">  <span class="kw">border-radius</span>: <span class="dv">10px</span>;</a>
+<a class="sourceLine" id="cb14-5" data-line-number="5">  <span class="kw">border-style</span>: <span class="dv">solid</span>;</a>
+<a class="sourceLine" id="cb14-6" data-line-number="6">  <span class="kw">border-width</span>: <span class="dv">1px</span>;</a>
+<a class="sourceLine" id="cb14-7" data-line-number="7">  <span class="kw">color</span>: <span class="dv">white</span>;</a>
+<a class="sourceLine" id="cb14-8" data-line-number="8">  <span class="kw">margin</span>: <span class="dv">10px</span> <span class="dv">0</span>;</a>
+<a class="sourceLine" id="cb14-9" data-line-number="9">  <span class="kw">padding</span>: <span class="dv">5px</span> <span class="dv">10px</span>;</a>
+<a class="sourceLine" id="cb14-10" data-line-number="10">}</a></code></pre></div>
+</section>
+<section id="practical-exercise" class="slide level2">
+<h2>Practical exercise</h2>
+<p>We are going to make a personal web page with:</p>
+<ul>
+<li>your name</li>
+<li>a picture</li>
+<li>a list of your interests</li>
+<li>a Twitter-style set of posts</li>
+<li>whatever else you like!</li>
+</ul>
+<p>It should use multiple colors and font sizes.</p>
+</section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1024,
+        height: 768,
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
