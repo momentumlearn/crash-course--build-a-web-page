@@ -4,10 +4,6 @@
 
 ## Crash Course: Build a Web Page
 
-Wifi: TIY-Turing
-
-Password: TIYturing16
-
 ::::
 
 ## What Makes a Web Page?
