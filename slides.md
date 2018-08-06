@@ -16,6 +16,8 @@
 
 In Chrome: View > Developer > View Source
 
+In Firefox: Tools > Web Developer > Page Source
+
 See the HTML that makes up any page.
 
 ---

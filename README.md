@@ -1,5 +1,15 @@
 # Crash Course: Build a Web Page
 
+## To run the slides
+
+This slide deck uses three tools to build it: pandoc, devd, and modd. To install on OS X:
+
+```
+brew install pandoc devd modd
+```
+
+Once installed, run `modd` to serve the slides. Changes to `slides.md` will be automatically compiled into `index.html`. The slides will be available at http://127.0.0.1:8000.
+
 ## Topics
 
 * What is a web page?
